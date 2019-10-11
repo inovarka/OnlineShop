@@ -1,0 +1,5 @@
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Entities\bin\Debug\OnlineShop.Entities.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Entities\bin\Debug\OnlineShop.Entities.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Entities\obj\Debug\OnlineShop.Entities.csprojAssemblyReference.cache
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Entities\obj\Debug\OnlineShop.Entities.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Entities\obj\Debug\OnlineShop.Entities.pdb

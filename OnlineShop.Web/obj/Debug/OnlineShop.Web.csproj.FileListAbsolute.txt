@@ -49,7 +49,6 @@ C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\roslyn\VBCSComp
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Antlr3.Runtime.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.dll
-C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.Owin.dll
@@ -84,7 +83,6 @@ C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\System.Web.WebP
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Newtonsoft.Json.xml
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Antlr3.Runtime.pdb
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.xml
-C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.xml
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -102,3 +100,5 @@ C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineSho
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.csproj.CopyComplete
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.xml
