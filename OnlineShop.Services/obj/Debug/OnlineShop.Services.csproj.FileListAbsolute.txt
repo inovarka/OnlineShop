@@ -1,0 +1,16 @@
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Services.dll.config
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Services.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Services.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\EntityFramework.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Database.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Entities.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Database.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Database.dll.config
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\OnlineShop.Entities.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\EntityFramework.xml
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\obj\Debug\OnlineShop.Services.csprojAssemblyReference.cache
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\obj\Debug\OnlineShop.Services.csproj.CopyComplete
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\obj\Debug\OnlineShop.Services.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Services\obj\Debug\OnlineShop.Services.pdb

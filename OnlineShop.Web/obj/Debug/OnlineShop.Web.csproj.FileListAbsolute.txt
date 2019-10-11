@@ -102,3 +102,11 @@ C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineSho
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.pdb
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.dll
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Entities.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Entities.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Services.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Database.dll
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Services.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Services.dll.config
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Database.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\bin\OnlineShop.Database.dll.config
