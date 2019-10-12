@@ -12,6 +12,7 @@ namespace OnlineShop.Web.Controllers
     public class ProductController : Controller
     {
         ProductsService productsService = new ProductsService();
+        CategoriesService categoryService = new CategoriesService();
         // GET: Product
         public ActionResult Index()
         { 
@@ -20,37 +21,36 @@ namespace OnlineShop.Web.Controllers
 
         public ActionResult ProductTable(string search)
         {
-            var products = productsService.GetProducts();
-            if(string.IsNullOrEmpty(search) == false)
+            ProductSearchViewModel model = new ProductSearchViewModel();
+            model.Products = productsService.GetProducts();
+            if (string.IsNullOrEmpty(search) == false)
             {
-                products = products.Where(p => p.Name.ToLower().Contains(search.ToLower())).ToList();
+                model.SearchTerm = search;
+                model.Products = model.Products.Where(p => p.Name != null && p.Name.ToLower().Contains(search.ToLower())).ToList();
             }
-            
- 
-
-            return PartialView(products);
+            return PartialView(model);
         }
 
         [HttpGet]
         public ActionResult Create()
         {
-            CategoriesService categoryService = new CategoriesService();
-
-            var categories = categoryService.GetCategories();
-
-            return PartialView(categories);
+            NewProductViewModel model = new NewProductViewModel();
+            
+            model.AvailableCategories = categoryService.GetCategories();
+            
+            return PartialView(model);
         }
 
         [HttpPost]
-        public ActionResult Create(NewCategoryViewModel model)
+        public ActionResult Create(NewProductViewModel model)
         {
-            CategoriesService categoryService = new CategoriesService();
+           
 
             var newProduct = new Product();
             newProduct.Name = model.Name;
             newProduct.Description = model.Description;
             newProduct.Price = model.Price;
-            //newProduct.CategoryID = model.CategoryID;
+            
             newProduct.Category = categoryService.GetCategory(model.CategoryID);
             
 
@@ -62,15 +62,31 @@ namespace OnlineShop.Web.Controllers
         [HttpGet]
         public ActionResult Edit(int ID)
         {
+            EditProductViewModel model = new EditProductViewModel();
+
             var product = productsService.GetProduct(ID);
 
-            return PartialView(product);
+            model.ID = product.ID;
+            model.Name = product.Name;
+            model.Description = product.Description;
+            model.Price = product.Price;
+            model.CategoryID = product.Category != null ? product.Category.ID : 0;
+            
+            model.AvailableCategories = categoryService.GetCategories();
+
+            return PartialView(model);
         }
 
         [HttpPost]
-        public ActionResult Edit(Product product)
+        public ActionResult Edit(EditProductViewModel model)
         {
-            productsService.UpdateProduct(product);
+            var existingProduct = productsService.GetProduct(model.ID);
+            existingProduct.Name = model.Name;
+            existingProduct.Description = model.Description;
+            existingProduct.Price = model.Price;
+            existingProduct.Category = categoryService.GetCategory(model.CategoryID);
+            
+            productsService.UpdateProduct(existingProduct);
             return RedirectToAction("ProductTable");
         }
 

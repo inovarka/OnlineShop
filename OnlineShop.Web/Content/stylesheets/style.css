@@ -2959,13 +2959,19 @@ article .more-link a:hover:after {
 /* Boxed
 -------------------------------------------------------------- */
 .home-boxed .boxed {
-	z-index: 0;
-	width: 92.708%;
-	margin: 0 auto;
-	background: #fff;
-	height: 100%;
-	overflow: hidden;
-  	-webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
-  	   -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
-  	        box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
+    z-index: 0;
+    width: 92.708%;
+    margin: 0 auto;
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.02);
+    
+}
+
+.wrap-td  {
+     width: 1px;
+    white-space: nowrap;
 }
