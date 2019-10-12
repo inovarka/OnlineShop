@@ -176,6 +176,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910122120114_newmigr.cs" />
+    <Compile Include="Migrations\201910122120114_newmigr.Designer.cs">
+      <DependentUpon>201910122120114_newmigr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -553,6 +558,11 @@
       <Project>{C55CEF97-B9F3-400D-A604-C7DD486C9C0B}</Project>
       <Name>OnlineShop.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201910122120114_newmigr.resx">
+      <DependentUpon>201910122120114_newmigr.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
