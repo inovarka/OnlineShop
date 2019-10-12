@@ -33,6 +33,7 @@ namespace OnlineShop.Services
 
             using (var context = new DBContext())
             {
+                //preventing category double
                 context.Entry(product.Category).State = System.Data.Entity.EntityState.Unchanged;
 
                 context.Products.Add(product);
