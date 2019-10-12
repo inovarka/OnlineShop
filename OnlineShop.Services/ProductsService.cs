@@ -30,8 +30,11 @@ namespace OnlineShop.Services
         public void SaveProduct(Product product)
         {
             
+
             using (var context = new DBContext())
             {
+                context.Entry(product.Category).State = System.Data.Entity.EntityState.Unchanged;
+
                 context.Products.Add(product);
                 context.SaveChanges();
             }

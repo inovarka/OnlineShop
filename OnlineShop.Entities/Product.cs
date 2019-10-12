@@ -9,6 +9,9 @@ namespace OnlineShop.Entities
     public class Product :BaseEntity
     {
         public virtual Category Category { get; set; }
+
+        //public int CategoryID { get; set; }
+
         public decimal Price { get; set; }
     }
 }
