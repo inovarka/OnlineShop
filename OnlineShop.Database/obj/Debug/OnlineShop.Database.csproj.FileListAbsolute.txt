@@ -13,3 +13,4 @@ C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\Onli
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.pdb
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.initialized.resources
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.csproj.GenerateResource.cache
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.ImageURLadded.resources
