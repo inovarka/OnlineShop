@@ -30,3 +30,4 @@ C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Database\obj\Debug\OnlineShop.
 C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Database\obj\Debug\OnlineShop.Database.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Database\obj\Debug\OnlineShop.Database.dll
 C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Database\obj\Debug\OnlineShop.Database.pdb
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.addedIsFeatured.resources
