@@ -1,4 +1,4 @@
-﻿
+﻿@model List<OnlineShop.Entities.Category>
 @{
     ViewBag.Title = "Create";
 }
@@ -6,6 +6,16 @@
 <h2>Create Product</h2>
 
 <form id="createProduct">
+    <label>Category</label>
+    <select name="CategoryID">
+        @foreach(var category in Model)
+        {
+            <option value="@category.ID">@category.Name</option>
+        }
+    </select>
+
+    <br />
+
     <label>Name</label>
     <input name="Name" />
 
@@ -32,7 +42,6 @@
             data: $("#createProduct").serialize()
         })  
             .done(function (response) {
-                
                 $("#tableContainer").html(response);
                 $("#actionContainer").html("");
             })

@@ -8,9 +8,9 @@ using OnlineShop.Entities;
 
 namespace OnlineShop.Database
 {
-    public class DBContext :DbContext
+    public class DBContext :DbContext, IDisposable
     {
-        public DBContext() : base("OnlineShopConnection")
+        public DBContext() : base("OnlineShop")
         {
 
         }
