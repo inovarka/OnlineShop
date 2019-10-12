@@ -16,6 +16,7 @@ namespace OnlineShop.Services
             using (var context = new DBContext())
             {
                 return context.Products.Find(ID);
+                // return
             }
         }
 
