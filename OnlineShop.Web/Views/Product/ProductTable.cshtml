@@ -66,19 +66,19 @@
                             <td class="wrap-td">
                                 <button class="editBtn" data-id="@product.ID">Edit</button>
                                 <button class="deleteBtn" data-id="@product.ID">Delete</button>
+                                <button class="addtoCart" data-id="@product.ID">Add To Cart</button>
                             </td>
                         </tr>
+                        }
                     }
-                               }
-                			else
-                			{
-                
-                <tr>
+                    else
+                    {
+                        <tr>
                     
-                    <td class="text-danger" colspan="4">No Products found.</td>
+                            <td class="text-danger" colspan="4">No Products found.</td>
                     
-                </tr>
-                }
+                        </tr>
+                    }
             </tbody>
         </table>
     </div>
@@ -157,8 +157,21 @@
                 alert("Fail!")
             });
         }
+    });
 
-        
+    $("#newBtn").click(function () {
+        $.ajax({
+            url: '/Product/Create',
+            
+        })  
+            .done(function (response) {
+                
+                $("#actionContainer").html(response);
+                focusAction();
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("Fail!")
+            });
     });
 
     function focusAction() {
