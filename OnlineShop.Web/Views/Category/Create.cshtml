@@ -117,20 +117,36 @@
 
 
     $("#saveBtn").click(function () {
-        $.ajax({
-            type: 'POST',
-            url: '@Url.Action("Create", "Category")',
-            data: $("#createCategory").serialize()
-        })
-            .done(function (response) {
-                $("#tableContainer").html(response);
-                $("#actionContainer").html("");
-                focusAction("tableContainer");
-
-            })
-            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-                alert("FAIL");
-            });
+        if ($("#createCategory").valid()) {
+			$.ajax({
+				type: 'POST',
+				url: '@Url.Action("Create", "Category")',
+				data: $("#createCategory").serialize()
+			})
+			.done(function (response) {
+				$("#tableContiner").html(response);
+				$("#actionContainer").html("");
+				focusAction("tableContiner");
+			})
+			.fail(function (XMLHttpRequest, textStatus, errorThrown) {
+				swal({
+					title: "Warning",
+					text: "Please enter all required fields.",
+					icon: "warning",
+					buttons: true,
+					dangerMode: true,
+				});
+			});
+		}
+		else {
+			swal({
+				title: "JS Warning",
+				text: "Please enter all required fields.",
+				icon: "warning",
+				buttons: true,
+				dangerMode: true,
+			});
+		}
     });
 
     $("#cancelBtn").click(function () {
