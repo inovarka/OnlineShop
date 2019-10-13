@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Create";
 
-    var imageURL =  "/Content/images/system/placeholder-image.png";
+    var imageURL = "/Content/images/system/placeholder-image.png";
 }
 
 <h2>Create Category</h2>
@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8">
             <div class="form-group">
-                <label>Name</label>
+                <label>Name <span class="text-danger">*</span></label>
                 <input class="form-control" name="Name" />
 
             </div>
@@ -76,8 +76,8 @@
 			data: formData,
 			contentType: false,
 			processData: false
-            
-        })  
+
+        })
             .done(function (response) {
                 console.log(response);
 
@@ -90,7 +90,31 @@
             .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("Fail!")
             });
-        });
+    });
+
+   	$('#createCategory').validate({
+		rules: {
+			Name: {
+				required: true,
+				minlength: 3,
+				maxlength: 50,
+			},
+			Description: {
+				maxlength: 500
+			}
+		},
+		messages: {
+			Name: {
+				required: 'Name is required',
+				minlength: 'Minimum Length is 3',
+				maxlength: 'Maximum Length is 50'
+			},
+			Description: {
+				maxlength: 'Maximum Length is 500'
+			}
+		}
+	});
+
 
     $("#saveBtn").click(function () {
         $.ajax({

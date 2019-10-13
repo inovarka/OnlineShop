@@ -11,20 +11,20 @@ namespace OnlineShop.Web.Controllers
 {
     public class ProductController : Controller
     {
-        
+
         // GET: Product
         public ActionResult Index()
-        { 
+        {
             return View();
         }
 
-        public ActionResult ProductTable(string search,int? pageNo)
+        public ActionResult ProductTable(string search, int? pageNo)
         {
             ProductSearchViewModel model = new ProductSearchViewModel();
             model.PageNo = pageNo.HasValue ? pageNo.Value > 0 ? pageNo.Value : 1 : 1;
-            
-                        
-            
+
+
+
             model.Products = ProductsService.Instance.GetProducts(model.PageNo);
             if (string.IsNullOrEmpty(search) == false)
             {
@@ -102,6 +102,16 @@ namespace OnlineShop.Web.Controllers
         {
             ProductsService.Instance.DeleteProduct(ID);
             return RedirectToAction("ProductTable");
+        }
+
+        [HttpGet]
+        public ActionResult Details(int ID)
+        {
+            ProductViewModel model = new ProductViewModel();
+
+            model.Product = ProductsService.Instance.GetProduct(ID);
+
+            return View(model);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using ClothBazar.Web.ViewModels;
 using OnlineShop.Entities;
+using System.ComponentModel.DataAnnotations;
 
 namespace OnlineShop.Web.ViewModels
 {
@@ -17,7 +18,10 @@ namespace OnlineShop.Web.ViewModels
 
     public class NewCategoryViewModel
     {
+        [Required]
+        [MinLength(3), MaxLength(50)]
         public string Name { get; set; }
+        [MaxLength(500)]
         public string Description { get; set; }
         public string ImageURL { get; set; }
 
