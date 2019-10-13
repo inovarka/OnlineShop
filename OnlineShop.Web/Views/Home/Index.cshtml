@@ -1,31 +1,16 @@
-﻿@model OnlineShop.Web.ViewModels.ProductViewModel
+﻿@model OnlineShop.Web.ViewModels.HomeViewModel
 
 @{
     ViewBag.Title = "Home Page";
-    var Category = Model.FeaturedCategories.Where(category => category.ImageURL != null).FirstOrDefault();
-    var firstCategory = Category;
-    var secondCategory = Category;
-    var thirdCategory = Category;
-    var fourthCategory = Category;
+
+    var firstCategory = Model.FeaturedCategories[0];
+    var secondCategory = Model.FeaturedCategories[1];
+    var thirdCategory = Model.FeaturedCategories[2];
+    var fourthCategory = Model.FeaturedCategories[3];
 
 
 
-    if (Model.FeaturedCategories[0] != null)
-    {
-        firstCategory = Model.FeaturedCategories[0];
-    }
-    if (Model.FeaturedCategories[1] != null)
-    {
-        secondCategory = Model.FeaturedCategories[1];
-    }
-    if (Model.FeaturedCategories[2] != null)
-    {
-        thirdCategory = Model.FeaturedCategories[2];
-    }
-    if (Model.FeaturedCategories[3] != null)
-    {
-        fourthCategory = Model.FeaturedCategories[3];
-    }
+
 
 
 }

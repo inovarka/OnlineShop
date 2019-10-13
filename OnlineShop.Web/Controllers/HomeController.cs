@@ -10,7 +10,6 @@ namespace OnlineShop.Web.Controllers
 {
     public class HomeController : Controller
     {
-        
         public ActionResult Index()
         {
             HomeViewModel model = new HomeViewModel();
