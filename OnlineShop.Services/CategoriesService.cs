@@ -31,6 +31,7 @@ namespace OnlineShop.Services
         {
             using (var context = new DBContext())
             {
+                //return null;
                 return context.Categories.Where(x => x.isFeatured && x.ImageURL != null).ToList();
             }
         }
