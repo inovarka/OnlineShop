@@ -226,3 +226,5 @@ C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Web\obj\Debug\OnlineShop.Web.M
 C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Web\obj\Debug\OnlineShop.Web.csproj.GenerateResource.Cache
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.Migrations.newmigr.resources
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.csproj.GenerateResource.cache
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.Migrations.configurationstable.resources
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Web\obj\Debug\OnlineShop.Web.Migrations.configcreated.resources
