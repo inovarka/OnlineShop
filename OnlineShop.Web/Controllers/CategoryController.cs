@@ -6,12 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using OnlineShop.Web.ViewModels;
+using System.Data.Entity;
+using ClothBazar.Web.ViewModels;
 
 namespace OnlineShop.Web.Controllers
 {
     public class CategoryController : Controller
     {
-        
+
 
         [HttpGet]
         public ActionResult Index()
@@ -19,20 +21,27 @@ namespace OnlineShop.Web.Controllers
             return View();
         }
 
-        public ActionResult CategoryTable(string search)
+        public ActionResult CategoryTable(string search, int? pageNo)
         {
             CategorySearchViewModel model = new CategorySearchViewModel();
+            model.SearchTerm = search;
+            pageNo = pageNo.HasValue ? pageNo.Value > 0 ? pageNo.Value : 1 : 1;
 
-            model.Categories = CategoriesService.Instance.GetCategories();
+            var totalRecords = CategoriesService.Instance.GetCategoriesCount(search);
+            model.Categories = CategoriesService.Instance.GetCategories(search, pageNo.Value);
 
-            if (!string.IsNullOrEmpty(search))
+            if (model.Categories != null)
             {
-                model.SearchTerm = search;
+                model.Pager = new Pager(totalRecords, pageNo, 3);
 
-                model.Categories = model.Categories.Where(p => p.Name != null && p.Name.ToLower().Contains(search.ToLower())).ToList();
+                return PartialView("_CategoryTable", model);
+            }
+            else
+            {
+                return HttpNotFound();
             }
 
-            return PartialView("_CategoryTable", model);
+
         }
         #region Creation
 
@@ -70,7 +79,7 @@ namespace OnlineShop.Web.Controllers
             model.Description = category.Description;
             model.ImageURL = category.ImageURL;
             model.isFeatured = category.isFeatured;
-            
+
             return PartialView(model);
         }
 

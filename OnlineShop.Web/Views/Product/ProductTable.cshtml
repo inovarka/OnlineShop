@@ -4,8 +4,7 @@
     ViewBag.Title = "ProductTable";
 }
 
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
 
 <div>
     <form method="post">
@@ -89,19 +88,19 @@
         </tbody>
     </table>
     <div>
-        @*@if (Model.PageNo != 1)
-            {
-                <button class="pageButtons" data-pageNo="@(Model.PageNo - 1)">Previous</button>
-            }
+        @if (Model.PageNo != 1)
+        {
+            <button class="pageButtons" data-pageNo="@(Model.PageNo - 1)">Previous</button>
+        }
 
-            <button class="pageButtons" data-pageNo="@(Model.PageNo + 1)">Next</button>*@
+        <button class="pageButtons" data-pageNo="@(Model.PageNo + 1)">Next</button>
 
     </div>
 </div>
 
 <script>
 
-    $('#ProductsTable').DataTable();
+    
 
     $(".pageButtons").click(function () {
         $.ajax({
