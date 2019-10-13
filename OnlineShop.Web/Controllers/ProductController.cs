@@ -44,8 +44,6 @@ namespace OnlineShop.Web.Controllers
         [HttpPost]
         public ActionResult Create(NewProductViewModel model)
         {
-           
-
             var newProduct = new Product();
             newProduct.Name = model.Name;
             newProduct.Description = model.Description;
