@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using OnlineShop.Web.Code;
 
 namespace OnlineShop.Web.Controllers
 {
@@ -12,9 +13,22 @@ namespace OnlineShop.Web.Controllers
     {
         CheckoutViewModel model = new CheckoutViewModel();
 
-        
+        public ActionResult Index(string searchTerm, int? minimumPrice, int? maximumPrice, int? categoryID, int? sortBy)
+        {
+            ShopViewModel model = new ShopViewModel();
 
-        public ActionResult Checkout()
+            model.FeaturedCategories = CategoriesService.Instance.GetFeaturedCategories();
+            model.MaximumPrice = ProductsService.Instance.GetMaximumPrice();
+
+            model.Products = ProductsService.Instance.SearchProducts(searchTerm, minimumPrice, maximumPrice, categoryID, sortBy);
+
+            model.SortBy = sortBy;
+
+            return View(model);
+        }
+
+
+    public ActionResult Checkout()
         {
             var CartProductsCookie = Request.Cookies["CartProducts"];
 

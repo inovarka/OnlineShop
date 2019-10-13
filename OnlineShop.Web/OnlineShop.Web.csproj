@@ -167,6 +167,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Code\Enums.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -444,6 +445,7 @@
     <Content Include="Content\javascript\rev-slider.js" />
     <Content Include="Content\javascript\switcher.js" />
     <Content Include="Content\javascript\tether.min.js" />
+    <Content Include="Content\images\OnlineShop.png" />
     <Content Include="Content\rev-slider\assets\coloredbg.png" />
     <Content Include="Content\rev-slider\assets\gridtile.png" />
     <Content Include="Content\rev-slider\assets\gridtile_3x3.png" />
@@ -554,6 +556,7 @@
     <Content Include="Views\Shop\Checkout.cshtml" />
     <Content Include="Views\Product\Details.cshtml" />
     <Content Include="Views\Widgets\Products.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
