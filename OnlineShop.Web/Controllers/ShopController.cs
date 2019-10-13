@@ -20,9 +20,9 @@ namespace OnlineShop.Web.Controllers
 
             if(CartProductsCookie !=null)
             {
-                var ProductIDs = CartProductsCookie.Value.Split('-').Select(x => int.Parse(x)).ToList();
+                model.CartProductIDs = CartProductsCookie.Value.Split('-').Select(x => int.Parse(x)).ToList();
 
-                model.CartProducts = productService.GetProducts(ProductIDs);
+                model.CartProducts = productService.GetProducts(model.CartProductIDs);
             }
 
             return View(model);
