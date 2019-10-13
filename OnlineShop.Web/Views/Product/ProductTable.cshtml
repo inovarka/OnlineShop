@@ -20,10 +20,14 @@
                 <div class="form-group">
                     <label>Action</label>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4 pr-0">
                             <button class="btn btn-primary form-control" type="button" id="searchBtn">Search</button>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4 pr-0">
+                            <button class="btn btn-primary form-control" type="button" id="resetBtn">Reset</button>
+
+                        </div>
+                        <div class="col-md-4 pr-0">
                             <button class="btn btn-primary form-control" type="button" id="newBtn">New</button>
                         </div>
                     </div>
@@ -85,25 +89,43 @@
         </tbody>
     </table>
     <div>
-        		@*@if (Model.PageNo != 1)
-           		{
-           			<button class="pageButtons" data-pageNo="@(Model.PageNo - 1)">Previous</button>
-           		}
-           
-           		<button class="pageButtons" data-pageNo="@(Model.PageNo + 1)">Next</button>*@
-        
+        @*@if (Model.PageNo != 1)
+            {
+                <button class="pageButtons" data-pageNo="@(Model.PageNo - 1)">Previous</button>
+            }
+
+            <button class="pageButtons" data-pageNo="@(Model.PageNo + 1)">Next</button>*@
+
     </div>
 </div>
 
 <script>
-    
-	$('#ProductsTable').DataTable();
 
-	$(".pageButtons").click(function () {
-		$.ajax({
-			url: '/Product/ProductTable',
-			data: {
-				pageNo : $(this).attr("data-pageNo")
+    $('#ProductsTable').DataTable();
+
+    $(".pageButtons").click(function () {
+        $.ajax({
+            url: '@Url.Action("ProductTable", "Product")',
+            data: {
+                pageNo: $(this).attr("data-pageNo")
+            }
+        })
+            .done(function (response) {
+                $("#tableContiner").html(response);
+            })
+            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+                alert("FAIL");
+            });
+    });
+
+
+    $("#searchBtn").click(function () {
+        var searchValue = $("#searchTxt").val();
+
+        $.ajax({
+            url: '@Url.Action("ProductTable", "Product")',
+            data: {
+				search: searchValue
 			}
 		})
         .done(function (response) {
@@ -112,31 +134,31 @@
         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
         	alert("FAIL");
         });
-	});
-
-
-    $("#searchBtn").click(function () {
-        var searchValue = $("#searchTxt").val();
-
-        $.ajax({
-            url: '/Product/ProductTable',
-            data: {
-                search: searchValue
-            }
-        })
-            .done(function (response) {
-
-                $("#tableContainer").html(response);
-                focusAction();
-            })
-            .fail(function (XMLHttpRequest, textStatus, errorThrown) {
-                alert("Fail!")
-            });
     });
+
+    $("#resetBtn").click(function () {
+		var searchValue = '';
+
+		$.ajax({
+			url: '@Url.Action("ProductTable", "Product")',
+ 			data: {
+ 				search: searchValue
+ 			}
+ 		})
+         .done(function (response) {
+         	$("#tableContiner").html(response);
+         })
+         .fail(function (XMLHttpRequest, textStatus, errorThrown) {
+         	alert("FAIL");
+         });
+ 	});
+
+            
+    
 
     $("#newBtn").click(function () {
         $.ajax({
-            url: '/Product/Create',
+            url: '@Url.Action("Create", "Product")',
 
         })
             .done(function (response) {
@@ -151,7 +173,7 @@
 
     $(".editBtn").click(function () {
         $.ajax({
-            url: '/Product/Edit',
+            url: '@Url.Action("Edit", "Product")',
             data: {
                 ID: $(this).attr('data-id')
             }

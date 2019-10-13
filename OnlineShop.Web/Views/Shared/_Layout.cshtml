@@ -1,8 +1,4 @@
-﻿@{ 
-    OnlineShop.Services.ConfigurationsService configurationsService = new OnlineShop.Services.ConfigurationsService();
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <!-- Basic Page Needs -->
@@ -183,7 +179,7 @@
                             <ul class="flat-social">
                            
 
-                                <li><a href="@configurationsService.GetConfig("ITStepURL").Value"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="@ConfigurationsService.Instance.GetConfig("ITStepURL").Value"><i class="fa fa-facebook"></i></a></li>
                                
                             </ul><!-- /.flat-social -->
                         </div><!-- /.subscribe -->
@@ -231,8 +227,8 @@
                                 <a href="index.html"><img src="~/Content/images/logo@2x.png" alt="image" width="107" height="24"></a>
                             </div>
                             <ul class="flat-contact">
-                                <li class="address">@configurationsService.GetConfig("Adress").Value</li>
-                                <li class="phone">@configurationsService.GetConfig("PhoneNumber").Value;</li>
+                                <li class="address">@ConfigurationsService.Instance.GetConfig("Adress").Value</li>
+                                <li class="phone">@ConfigurationsService.Instance.GetConfig("PhoneNumber").Value;</li>
                                 <li class="email">infor.deercreative@gmail.com</li>
                             </ul><!-- /.flat-contact -->
                         </div><!-- /.widget -->
