@@ -34,6 +34,7 @@ namespace OnlineShop.Web.Controllers
 
             return PartialView("_CategoryTable", model);
         }
+        #region Creation
 
         [HttpGet]
         public ActionResult Create()
@@ -54,6 +55,9 @@ namespace OnlineShop.Web.Controllers
 
             return RedirectToAction("CategoryTable");
         }
+        #endregion
+
+        #region Updation
 
         [HttpGet]
         public ActionResult Edit(int ID)
@@ -84,6 +88,7 @@ namespace OnlineShop.Web.Controllers
             return RedirectToAction("CategoryTable");
 
         }
+        #endregion
 
         [HttpPost]
         public ActionResult Delete(int ID)
