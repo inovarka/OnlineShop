@@ -60,6 +60,7 @@
     </div>
 
     <button id="updateBtn" type="button" class="btn btn-primary">Update</button>
+    <button id="cancelBtn" type="button" class="btn btn-primary">Cancel</button>
 
 </form>
 
@@ -107,13 +108,19 @@
             data: $("#editCategory").serialize()
         })
             .done(function (response) {
-                $("#tableContiner").html(response);
+                $("#tableContainer").html(response);
                 $("#actionContainer").html("");
+                focusAction("tableContainer");
             })
             .fail(function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("FAIL");
             });
     });
+
+    $("#cancelBtn").click(function () {
+		$("#actionContainer").html("");
+        focusAction("tableContiner");
+	});
 </script>
 
 

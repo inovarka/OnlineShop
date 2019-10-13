@@ -11,7 +11,7 @@ namespace OnlineShop.Web.Controllers
 {
     public class CategoryController : Controller
     {
-        CategoriesService categoryService = new CategoriesService();
+        
 
         [HttpGet]
         public ActionResult Index()
