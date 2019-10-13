@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ClothBazar.Web.Controllers
+namespace OnlineShop.Web.Controllers
 {
     public class SharedController : Controller
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ClothBazar.Web.ViewModels;
+using OnlineShop.Web.ViewModels;
 using OnlineShop.Entities;
 using System.ComponentModel.DataAnnotations;
 

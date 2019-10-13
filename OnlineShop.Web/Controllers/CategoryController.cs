@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using OnlineShop.Web.ViewModels;
 using System.Data.Entity;
-using ClothBazar.Web.ViewModels;
+
 
 namespace OnlineShop.Web.Controllers
 {
