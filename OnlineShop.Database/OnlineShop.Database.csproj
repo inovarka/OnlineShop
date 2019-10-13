@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201910130056548_configcreated.Designer.cs">
       <DependentUpon>201910130056548_configcreated.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910130342574_productImageURL.cs" />
+    <Compile Include="Migrations\201910130342574_productImageURL.Designer.cs">
+      <DependentUpon>201910130342574_productImageURL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910130056548_configcreated.resx">
       <DependentUpon>201910130056548_configcreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910130342574_productImageURL.resx">
+      <DependentUpon>201910130342574_productImageURL.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

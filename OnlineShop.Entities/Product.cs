@@ -13,5 +13,6 @@ namespace OnlineShop.Entities
         //public int CategoryID { get; set; }
 
         public decimal Price { get; set; }
+        public string ImageURL { get; set; }
     }
 }

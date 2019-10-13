@@ -53,6 +53,8 @@ namespace OnlineShop.Web.Controllers
             newProduct.Price = model.Price;
 
             newProduct.Category = CategoriesService.Instance.GetCategory(model.CategoryID);
+            newProduct.ImageURL = model.ImageURL;
+
 
 
             ProductsService.Instance.SaveProduct(newProduct);
@@ -72,6 +74,8 @@ namespace OnlineShop.Web.Controllers
             model.Description = product.Description;
             model.Price = product.Price;
             model.CategoryID = product.Category != null ? product.Category.ID : 0;
+            model.ImageURL = product.ImageURL;
+
 
             model.AvailableCategories = CategoriesService.Instance.GetCategories();
 
@@ -86,6 +90,8 @@ namespace OnlineShop.Web.Controllers
             existingProduct.Description = model.Description;
             existingProduct.Price = model.Price;
             existingProduct.Category = CategoriesService.Instance.GetCategory(model.CategoryID);
+            existingProduct.ImageURL = model.ImageURL;
+
 
             ProductsService.Instance.UpdateProduct(existingProduct);
             return RedirectToAction("ProductTable");
