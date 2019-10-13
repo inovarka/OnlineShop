@@ -35,3 +35,4 @@ C:\Users\Admin\Source\Repos\OnlineShop\OnlineShop.Database\obj\Debug\OnlineShop.
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.configcreated.resources
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.productImageURL.resources
 C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.entityvalidation.resources
+C:\Users\pavel\source\repos\OnlineShopProject\OnlineShop.Database\obj\Debug\OnlineShop.Database.Migrations.addedProductID.resources

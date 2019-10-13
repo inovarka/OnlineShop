@@ -187,7 +187,7 @@ namespace OnlineShop.Services
 
         public int GetProductsCount(string search)
         {
-            using (var context = new CBContext())
+            using (var context = new DBContext())
             {
                 if (!string.IsNullOrEmpty(search))
                 {
