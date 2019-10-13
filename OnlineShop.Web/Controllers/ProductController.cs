@@ -21,17 +21,17 @@ namespace OnlineShop.Web.Controllers
 
         public ActionResult ProductTable(string search, int? pageNo)
         {
+            var pageSize = ConfigurationsService.Instance.PageSize();
+
             ProductSearchViewModel model = new ProductSearchViewModel();
-            model.PageNo = pageNo.HasValue ? pageNo.Value > 0 ? pageNo.Value : 1 : 1;
+            model.SearchTerm = search;
 
+            pageNo = pageNo.HasValue ? pageNo.Value > 0 ? pageNo.Value : 1 : 1;
 
+            var totalRecords = ProductsService.Instance.GetProductsCount(search);
+            model.Products = ProductsService.Instance.GetProducts(search, pageNo.Value, pageSize);
 
-            model.Products = ProductsService.Instance.GetProducts(model.PageNo);
-            if (string.IsNullOrEmpty(search) == false)
-            {
-                model.SearchTerm = search;
-                model.Products = model.Products.Where(p => p.Name != null && p.Name.ToLower().Contains(search.ToLower())).ToList();
-            }
+            model.Pager = new Pager(totalRecords, pageNo, pageSize);
             return PartialView(model);
         }
 
@@ -90,8 +90,15 @@ namespace OnlineShop.Web.Controllers
             existingProduct.Name = model.Name;
             existingProduct.Description = model.Description;
             existingProduct.Price = model.Price;
-            existingProduct.Category = CategoriesService.Instance.GetCategory(model.CategoryID);
-            existingProduct.ImageURL = model.ImageURL;
+
+            existingProduct.Category = null; //mark it null. Because the referncy key is changed below
+            existingProduct.CategoryID = model.CategoryID;
+
+            //dont update imageURL if its empty
+            if (!string.IsNullOrEmpty(model.ImageURL))
+            {
+                existingProduct.ImageURL = model.ImageURL;
+            }
 
 
             ProductsService.Instance.UpdateProduct(existingProduct);
