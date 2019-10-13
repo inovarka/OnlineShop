@@ -173,12 +173,21 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201910122120114_newmigr.cs" />
     <Compile Include="Migrations\201910122120114_newmigr.Designer.cs">
       <DependentUpon>201910122120114_newmigr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910130050297_configurationstable.cs" />
+    <Compile Include="Migrations\201910130050297_configurationstable.Designer.cs">
+      <DependentUpon>201910130050297_configurationstable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910130056449_configcreated.cs" />
+    <Compile Include="Migrations\201910130056449_configcreated.Designer.cs">
+      <DependentUpon>201910130056449_configcreated.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -189,6 +198,7 @@
     <Compile Include="ViewModels\CategoryViewModels.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\ProductViewModels.cs" />
+    <Compile Include="ViewModels\ShopViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
@@ -538,6 +548,7 @@
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Category\_CategoryTable.cshtml" />
+    <Content Include="Views\Shop\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -565,6 +576,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201910122120114_newmigr.resx">
       <DependentUpon>201910122120114_newmigr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910130050297_configurationstable.resx">
+      <DependentUpon>201910130050297_configurationstable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910130056449_configcreated.resx">
+      <DependentUpon>201910130056449_configcreated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
