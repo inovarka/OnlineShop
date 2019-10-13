@@ -1,0 +1,23 @@
+﻿@model OnlineShop.Web.ViewModels.CheckoutViewModel
+
+@if(Model !=null)
+{
+    if(Model.CartProducts != null && Model.CartProducts.Count > 0)
+    {
+        <div>
+            @foreach(var product in Model.CartProducts)
+            {
+                <div>
+                    @product.Name - @product.Price
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div>
+            <text>No Products in cart.</text>
+        </div>
+    }
+}
+

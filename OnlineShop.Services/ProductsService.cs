@@ -19,6 +19,14 @@ namespace OnlineShop.Services
             }
         }
 
+        public List<Product> GetProducts(List<int> IDs)
+        {
+            using (var context = new DBContext())
+            {
+                return context.Products.Where(product => IDs.Contains(product.ID)).ToList();
+            }
+        }
+
         public List<Product> GetProducts()
         {
             using (var context = new DBContext())
